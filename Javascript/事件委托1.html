@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>批量添加事件监听</title>
+</head>
+<body>
+    <ul id="list">
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+    </ul>
+
+    <script>
+        var oList = document.getElementById('list');
+        var lis = oList.getElementsByTagName('li');
+
+        //书写循环语句，给li元素批量添加监听
+        for(var i = 0; i< lis.length; i++){
+            lis[i].onclick = function(){
+                this.style.color = 'red';
+            };
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <p>
+        <!-- 要求必须输入数字和小写字母 -->
+        <input type="text" id="field">
+    </p>
+
+    <script>
+        var oField = document.getElementById('field');
+
+        oField.onkeypress = function(e){
+            //数字0-9， 字符码 48-57
+            //a-z, 97-122
+            if(!(e.charCode >= 48 && e.charCode <= 57 || e.charCode >= 97 && e.charCode <= 122)){
+                //阻止默认事件，默认就是输入后会显示出来
+                e.preventDefault();
+            }
+        };
+    </script>
+</body>
+</html>

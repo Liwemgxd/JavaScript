@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">添加新的列表项</button>
+    <ul id="list"></ul>
+
+    <script>
+        var Obtn = document.getElementById('btn');
+        var oList = document.getElementById('list');
+
+        Obtn.onclick = function(){
+            //创建新的列表项
+            var oli = document.createElement('li');
+            oli.innerHTML = '我是列表项';
+            //上树
+            oList.appendChild(oli);
+            //给新创建的节点添加监听
+            oli.onclick = function(){
+                this.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>

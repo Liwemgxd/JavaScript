@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <button id="btn">按钮</button>
+
+    </div>
+
+    <script>
+        var oBox = document.getElementById('box');
+        var oBtn = document.getElementById('btn');
+
+        oBox.onclick = function(e){
+            console.log('我是盒子')
+        }
+        oBtn.onclick = function(e){
+            //在冒泡阶段，阻止事件继续传播
+            //如果写成DOM2级的事件形式，参数设为true，那么在盒子上添加该方法，阻止向内传播
+            e.stopPropagation();
+            console.log('我是按钮')
+        }
+    </script>
+</body>
+</html>
